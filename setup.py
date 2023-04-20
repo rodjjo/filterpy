@@ -1,9 +1,12 @@
 from setuptools import setup, find_packages  # Always prefer setuptools over distutils
 from codecs import open  # To use a consistent encoding
 from os import path
-import filterpy
+import sys
 
 here = path.abspath(path.dirname(__file__))
+sys.path.append(here)
+
+import filterpy
 
 # Get the long description from the relevant file
 with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
